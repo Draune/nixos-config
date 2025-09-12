@@ -72,6 +72,8 @@
   curl
   wget
   firefox
+  discord
+  thunderbird
   gh
   ];
 
