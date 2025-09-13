@@ -65,9 +65,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+  # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   emacs
+
+  # UTILITIES
   git
   curl
   wget
@@ -75,7 +76,26 @@
   discord
   thunderbird
   gh
+  unixtools.ping
+  maim
+  virt-manager
+
+  # PROG
+  gcc
+  gdb
+  # Java
+  zulu
+
+  # CYBER
+
+  ghidra
+  # ida-free
+  # Java decompiler
+  jadx
+  # tool for reverse engineering APK files
+  apktool
   ];
+  virtualisation.docker = { enable = true; };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
