@@ -83,6 +83,8 @@
   # PROG
   gcc
   gdb
+  # Python and python packages
+  python313
   # Java
   zulu
 
