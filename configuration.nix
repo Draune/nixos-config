@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      # I set an absolute path so I don't have to save hardware configurations in github.
       /etc/nixos/hardware-configuration.nix
     ];
 
@@ -64,29 +65,21 @@
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [  
+    # need to declare it in systemPackages too and to run it after launching the VM
     spice-vdagent
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  services.xserver.enable = true;
+  services.displayManager.ly.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  
+  # enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  # VM
+  services.spice-vdagentd.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -95,15 +88,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
-  services.xserver.enable = true;
-  services.displayManager.ly.enable = true;
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
-  
-  # enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-  # VM
-  services.spice-vdagentd.enable = true;
 }
