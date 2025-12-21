@@ -7,12 +7,13 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.useOSProber = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -52,9 +53,9 @@
   console.keyMap = "fr";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.louis = {
+  users.users.user = {
     isNormalUser = true;
-    description = "louis";
+    description = "user";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
@@ -64,40 +65,9 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  emacs
-
-  # UTILITIES
-  git
-  curl
-  wget
-  firefox
-  discord
-  thunderbird
-  gh
-  unixtools.ping
-  maim
-  virt-manager
-
-  # PROG
-  gcc
-  gdb
-  # Python and python packages
-  python313
-  # Java
-  zulu
-
-  # CYBER
-
-  ghidra
-  # ida-free
-  # Java decompiler
-  jadx
-  # tool for reverse engineering APK files
-  apktool
+  environment.systemPackages = with pkgs; [  
+    spice-vdagent
   ];
-  virtualisation.docker = { enable = true; };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -124,10 +94,16 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  system.stateVersion = "25.11"; # Did you read the comment?
 
   services.xserver.enable = true;
-  services.xserver.displayManager.startx.enable = true;
+  services.displayManager.ly.enable = true;
+  services.xserver.windowManager.i3.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
+  
+  # enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  # VM
+  services.spice-vdagentd.enable = true;
 }
