@@ -17,6 +17,10 @@
     # lsp servers
     nixd
     clang
+
+    # other tools
+    fd
+    ripgrep
   ];
 
   programs.git = {
