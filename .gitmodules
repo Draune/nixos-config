@@ -1,0 +1,3 @@
+[submodule "modules/emacs/emacs-config"]
+	path = modules/emacs/emacs-config
+	url = https://github.com/Draune/emacs-config
