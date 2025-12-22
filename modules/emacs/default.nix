@@ -2,6 +2,7 @@
   # every thing I need to use with emacs and for dev
   home.packages = with pkgs; [
     libtool # to build vterm
+    git
     gh
 
     # build tools
@@ -30,7 +31,7 @@
     (load-file "${"/home/user" + "/.emacs-config/init.el"}")
 '';
   };
-  
+
   home.file.".emacs-config" = {
     source = ./emacs-config;
     recursive = true;
