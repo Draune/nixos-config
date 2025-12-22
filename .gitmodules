@@ -1,3 +1,6 @@
 [submodule "modules/emacs/emacs-config"]
 	path = modules/emacs/emacs-config
 	url = https://github.com/Draune/emacs-config
+[submodule "modules/exwm/xephyr-exwm"]
+	path = modules/exwm/xephyr-exwm
+	url = https://github.com/Draune/xephyr-exwm
