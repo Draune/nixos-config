@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   # every thing I need to use with emacs and for dev
   home.packages = with pkgs; [
-    emacs
     libtool # to build vterm
     gh
 
@@ -25,7 +24,14 @@
     settings.user.email = "sioul.duaner@gmail.com";
   };
 
-  home.file.".emacs.d" = {
+  programs.emacs = {
+    enable = true;
+    extraConfig = ''
+    (load-file "${"/home/user" + "/.emacs-config/init.el"}")
+'';
+  };
+  
+  home.file.".emacs-config" = {
     source = ./emacs-config;
     recursive = true;
   };
