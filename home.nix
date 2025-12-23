@@ -13,6 +13,7 @@
 
   imports = [
     ./modules/emacs
+    ./modules/exwm
   ];
   home.stateVersion = "25.11";
 }
