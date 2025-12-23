@@ -9,12 +9,11 @@
     [ # Include the results of the hardware scan.
       # I set an absolute path so I don't have to save hardware configurations in github.
       /etc/nixos/hardware-configuration.nix
+      ./configs/vm
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -57,8 +56,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   # Allow unfree packages
@@ -66,8 +64,6 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [  
-    # need to declare it in systemPackages too and to run it after launching the VM
-    spice-vdagent
   ];
 
 
@@ -78,11 +74,8 @@
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
-  # VM
-  services.xserver.videoDrivers = [ "qxl" ];
-  services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true;
-
+  virtualisation.docker.enable = true;
+  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
