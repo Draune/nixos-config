@@ -1,9 +1,18 @@
-{...}: {
-  # Don't really needs pkgs since I will already have Xorg installed
-
-  # Add ~/.local/bin to PATH
-  home.sessionPath = [ "$HOME/.local/bin" ];
+{pkgs, config, ...}: {
+  # Don't really needs to install Xephyr (xorg.xserver) since I will already have Xorg installed
   
-  home.file.".local/bin/xephyr-exwm".source = ./xephyr-exwm/xephyr-exwm;
-  home.file.".local/bin/xephyr-exwm".executable = true;
+  home.packages = with pkgs; [
+    (writeShellScriptBin "xephyr-exwm" (builtins.readFile ./xephyr-exwm/xephyr-exwm))
+  ];
+
+  xdg.desktopEntries = {
+    exwm = {
+      name = "EXWM";
+      exec = "xephyr-exwm";
+      comment = "Launch Emacs inside a Xephyr window";
+      icon = ./emacs.png;
+    };
+     
+  };
+  
 }
