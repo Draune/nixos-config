@@ -73,12 +73,14 @@
 
   services.xserver.enable = true;
   services.displayManager.ly.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  
+  services.desktopManager.gnome.enable = true;
+
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # VM
+  services.xserver.videoDrivers = [ "qxl" ];
+  services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
 
   # This value determines the NixOS release from which the default
