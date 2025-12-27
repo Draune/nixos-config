@@ -12,8 +12,7 @@
       ./configs/vm
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  # Bootloader in specific config (if in vm, in ./configs.vm/default.nix)
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -69,7 +68,7 @@
 
   services.xserver.enable = true;
   services.displayManager.ly.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.xserver.windowManager.i3.enable = true;
 
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
