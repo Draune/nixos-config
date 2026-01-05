@@ -1,0 +1,12 @@
+#!/bin/sh
+
+Xephyr -dpi 95 -ac -br -noreset -fullscreen :2 &
+XPID=$!
+sleep 1
+
+# so I can use the Altgr key on my french keyboard
+DISPLAY=:2 setxkbmap fr -variant oss
+DISPLAY=:2 i3
+
+# to close xephyr when emacs close
+kill $XPID

@@ -14,6 +14,7 @@
   imports = [
     ./modules/emacs
     ./modules/exwm
+    ./modules/i3
   ];
   home.stateVersion = "25.11";
 }
