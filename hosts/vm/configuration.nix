@@ -28,7 +28,7 @@
   services.spice-vdagentd.enable = true;
   services.spice-autorandr.enable = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "vm"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -74,11 +74,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  environment.systemPackages = with pkgs; [  
-  ];
-
 
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
