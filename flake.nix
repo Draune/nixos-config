@@ -18,7 +18,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
-        ./configuration.nix
+        ./hosts/vm/configuration.nix
         home-manager.nixosModules.home-manager 
         {
           home-manager.useGlobalPkgs = true;

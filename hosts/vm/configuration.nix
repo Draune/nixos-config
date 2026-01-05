@@ -8,11 +8,25 @@
   imports =
     [ # Include the results of the hardware scan.
       # I set an absolute path so I don't have to save hardware configurations in github.
-      /etc/nixos/hardware-configuration.nix
-      ./configs/vm
+      ./hardware-configuration.nix
     ];
 
-  # Bootloader in specific config (if in vm, in ./configs.vm/default.nix)
+  environment.systemPackages = with pkgs; [  
+    # need to declare it in systemPackages too and to run it after launching the VM
+    spice-vdagent
+  ];
+
+  # let bootloader be config specific 
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.useOSProber = true;
+  
+  services.xserver.videoDrivers = [ "qxl" ];
+  services.qemuGuest.enable = true;
+  
+  # run "spice-autorandr &; spice-vdagent &"
+  services.spice-vdagentd.enable = true;
+  services.spice-autorandr.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -67,8 +81,7 @@
 
 
   services.xserver.enable = true;
-  services.displayManager.ly.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+  services.xserver.displayManager.startx.enable = true;
 
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
