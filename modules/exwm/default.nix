@@ -11,8 +11,9 @@
       exec = "xephyr-exwm";
       comment = "Launch Emacs inside a Xephyr window";
       icon = ./emacs.png;
-    };
-     
+    };     
   };
+
+  home.file.".xinitrc".source = ./xinitrc;
   
 }
