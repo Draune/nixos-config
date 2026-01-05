@@ -7,7 +7,7 @@
   ];
 
   xdg.desktopEntries = {
-    exwm = {
+    xephyr-i3 = {
       name = "xephyr-i3";
       exec = "xephyr-i3";
       comment = "Launch i3 inside a Xephyr window";
@@ -15,4 +15,5 @@
     };     
   };
   
+  xdg.configFile."i3/config".source = ./config;
 }

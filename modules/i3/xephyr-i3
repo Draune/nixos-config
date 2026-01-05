@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Xephyr -dpi 95 -ac -br -noreset -fullscreen :2 &
+Xephyr -dpi 95 -ac -br -noreset -resizable :2 &
 XPID=$!
 sleep 1
 
