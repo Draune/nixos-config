@@ -3,6 +3,8 @@
   
   home.packages = with pkgs; [
     (writeShellScriptBin "xephyr-i3" (builtins.readFile ./xephyr-i3))
+    dmenu
+    i3status
     i3
   ];
 
