@@ -1,8 +1,8 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, ... }:
 
 {
-  home.username = "${username}";
-  home.homeDirectory = "/home/${username}";
+  home.username = "user";
+  home.homeDirectory = "/home/user";
   
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -16,4 +16,5 @@
     ../../modules/exwm
     ../../modules/i3
   ];
+  home.stateVersion = "25.11";
 }
