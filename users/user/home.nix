@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
-  home.username = "user";
-  home.homeDirectory = "/home/user";
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
   
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -12,9 +12,8 @@
   ];
 
   imports = [
-    ./modules/emacs
-    ./modules/exwm
-    ./modules/i3
+    ../../modules/emacs
+    ../../modules/exwm
+    ../../modules/i3
   ];
-  home.stateVersion = "25.11";
 }
