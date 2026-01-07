@@ -13,4 +13,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 xsetroot -cursor_name left_ptr
 
+feh --bg-fill ~/.wallpaper.jpg
+picom -b &
+
 exec emacs

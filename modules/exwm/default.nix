@@ -20,7 +20,7 @@
 
   services.picom = {
     enable = true;
-    activeOpacity = 0.8;
-    inactiveOpacity = 0.8;
+    activeOpacity = 0.85;
+    inactiveOpacity = 0.85;
   };
 }
