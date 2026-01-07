@@ -91,7 +91,7 @@
 
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
-
+  programs.i3lock.enable = true;
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
