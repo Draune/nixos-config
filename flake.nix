@@ -28,5 +28,17 @@
         }
       ];
     };
+    nixosConfigurations.laptop2 = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./hosts/laptop2/configuration.nix
+        home-manager.nixosModules.home-manager 
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.user = import ./users/user/home.nix;
+        }
+      ];
+    };
   };
 }
