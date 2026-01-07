@@ -28,7 +28,14 @@
     settings.user.name = "Draune";
     settings.user.email = "sioul.duaner@gmail.com";
   };
-
+  
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper = {
+      enable = true;
+    };
+  };
+  
   programs.emacs = {
     enable = true;
     extraConfig = ''
