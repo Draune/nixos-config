@@ -22,4 +22,5 @@
   };
   
   xdg.configFile."i3/config".source = ./config;
+  xdg.configFile."i3status/config".source = ./i3status-config;
 }

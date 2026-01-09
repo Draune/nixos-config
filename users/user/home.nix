@@ -10,12 +10,14 @@
   home.packages = with pkgs; [
     firefox
     vesktop
+    unzip
   ];
 
   imports = [
     ../../modules/emacs
     ../../modules/exwm
     ../../modules/i3
+    ../../modules/xterm
   ];
   home.stateVersion = "25.11";
 }
