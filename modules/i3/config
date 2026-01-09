@@ -157,3 +157,6 @@ bar {
 
 exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
 exec --no-startup-id picom -d 
+
+bindsym $mod+l exec --no-startup-id "maim /tmp/screenlock.png && i3lock -i /tmp/screenlock.png"
+bindsym Print exec --no-startup-id "maim -s ~/Pictures/$(date +'%F_%X').png"
