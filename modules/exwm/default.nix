@@ -2,10 +2,13 @@
   # Don't really needs to install Xephyr (xorg.xserver) since I will already have Xorg installed
   
   home.packages = with pkgs; [
-    maim
-    i3lock
-    feh
     (writeShellScriptBin "xephyr-exwm" (builtins.readFile ./xephyr-exwm/xephyr-exwm))
+  ];
+  
+  imports = [
+    ../../modules-wm/feh
+    ../../modules-wm/picom
+    ../../modules-wm/maim
   ];
 
   xdg.desktopEntries = {
@@ -18,11 +21,4 @@
   };
 
   home.file.".xinitrc".source = ./xinitrc;
-  home.file.".wallpaper.jpg".source = ./wallpaper.jpg;
-
-  services.picom = {
-    enable = true;
-    activeOpacity = 0.85;
-    inactiveOpacity = 0.85;
-  };
 }

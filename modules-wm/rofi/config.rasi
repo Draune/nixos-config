@@ -1,0 +1,46 @@
+* {
+    /* Theme settings */
+    highlight: bold;
+    scrollbar: true;
+
+    /* (Ef-theme) Melissa light colors */
+    melissa-light-bg0:          #fff6d8;
+    melissa-light-bg1:          #f5e9cb;
+    melissa-light-bg2:          #e7d7c6;
+    melissa-light-fg0:          #484431;
+    melissa-light-fg1:          #80431a;
+    melissa-light-red-dark:     #ba2d2f;
+    melissa-light-red-light:    #c74400;
+    melissa-light-yellow-dark:  #a26310;
+    melissa-light-yellow-light: #7f6f1a;
+    melissa-light-gray:         #7c6f64;
+
+    /* Theme colors */
+    background:                  @melissa-light-bg0;
+    background-color:            @background;
+    foreground:                  @melissa-light-fg1;
+    border-color:                @melissa-light-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @melissa-light-bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @melissa-light-bg2;
+    selected-normal-foreground:  @melissa-light-fg0;
+
+    active-background:           @melissa-light-yellow-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @melissa-light-yellow-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @melissa-light-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @melissa-light-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
