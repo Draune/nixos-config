@@ -153,5 +153,5 @@ bar {
         status_command i3status
 }
 
-feh --bg-fill ~/.wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
 exec --no-startup-id picom -d 
