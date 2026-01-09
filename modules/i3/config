@@ -71,7 +71,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -152,3 +152,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+feh --bg-fill ~/.wallpaper.jpg
+exec --no-startup-id picom -d 
