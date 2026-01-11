@@ -17,7 +17,7 @@
     ../../modules/emacs
     ../../modules/exwm
     ../../modules/i3
-    ../../modules/xterm
+    ../../modules/kitty
   ];
   home.stateVersion = "25.11";
 }

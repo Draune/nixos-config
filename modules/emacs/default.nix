@@ -40,6 +40,7 @@
     enable = true;
     extraConfig = ''
     (load-file "${"/home/user" + "/.emacs-config/init.el"}")
+    (load-file "${"/home/user" + "/.emacs-config/theme.el"}")
 '';
   };
 
@@ -47,4 +48,5 @@
     source = ./emacs-config;
     recursive = true;
   };
+  home.file.".emacs-config/theme.el".source = ../../themes/ef-melissa-light/emacs-theme.el;
 }
