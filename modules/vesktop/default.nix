@@ -4,5 +4,5 @@
     vesktop
   ];
 
-  home.file.".config/vesktop/themes/theme.conf".source = ../../themes/ef-melissa-light/vesktop-theme.css;
+  home.file.".config/vesktop/themes/theme.css".source = ../../themes/ef-melissa-light/vesktop-theme.css;
 }

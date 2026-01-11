@@ -17,6 +17,7 @@
     ../../modules/exwm
     ../../modules/i3
     ../../modules/kitty
+    ../../modules/vesktop
   ];
   home.stateVersion = "25.11";
 }
