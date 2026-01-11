@@ -1,0 +1,150 @@
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+/* ===================== */
+/* Core theme variables  */
+/* ===================== */
+body {
+    --font: 'DejaVu Sans Mono';
+    --code-font: 'DejaVu Sans Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+
+    --background-image: off;
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+
+    --small-user-panel: on;
+    --unrounding: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: var(--text-4);
+    --label-font-weight: 500;
+}
+
+/* ===================== */
+/* Color system          */
+/* ===================== */
+:root {
+    --colors: on;
+
+    /* ========= Text ========= */
+    --text-0: var(--bg-4);            /* text on accent elements */
+    --text-1: #484431;                /* primary text */
+    --text-2: #484431;                /* headers */
+    --text-3: #5a5200;                /* normal text */
+    --text-4: #68708a;                /* icons / secondary */
+    --text-5: #a26310;                /* muted / timestamps */
+
+    /* ========= Backgrounds ========= */
+    --bg-1: #e7d7c6;                  /* active */
+    --bg-2: #fae7b0;                  /* hover */
+    --bg-3: #f9efd4;                  /* secondary panels */
+    --bg-4: #fff6d8;                  /* main background */
+
+    --hover: var(--bg-2);
+    --active: var(--bg-1);
+    --active-2: #e7d7c6;
+    --message-hover: var(--bg-2);
+
+    /* ========= Accents ========= */
+    --accent-1: #375cc6;              /* links */
+    --accent-2: #5f5fdf;              /* small accents */
+    --accent-3: #3f60af;              /* buttons */
+    --accent-4: #5f5fdf;              /* button hover */
+    --accent-5: #375cc6;              /* button active */
+
+    --accent-new: #ba2d2f;             /* danger / mute */
+
+    --mention: linear-gradient(
+        to right,
+        color-mix(in srgb, #5f5fdf 15%, transparent),
+        transparent
+    );
+
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in srgb, #5f5fdf 25%, transparent),
+        transparent
+    );
+
+    --reply: linear-gradient(
+        to right,
+        color-mix(in srgb, #484431 12%, transparent),
+        transparent
+    );
+
+    --reply-hover: linear-gradient(
+        to right,
+        color-mix(in srgb, #484431 20%, transparent),
+        transparent
+    );
+
+    /* ========= Status ========= */
+    --online: #007a0a;
+    --idle: #a26310;
+    --dnd: #ba2d2f;
+    --streaming: #aa3e74;
+    --offline: #68708a;
+
+    /* ========= Borders ========= */
+    --border-light: #e7d7c6;
+    --border: #d8c7a0;
+    --border-hover: #5f5fdf;
+    --button-border: rgba(72, 68, 49, 0.15);
+
+    /* ========= Base palette ========= */
+    --red-1: #ba2d2f;
+    --red-2: #c74400;
+    --red-3: #ba5205;
+    --red-4: #a26310;
+    --red-5: #68708a;
+
+    --green-1: #007a0a;
+    --green-2: #5a7400;
+    --green-3: #007a0a;
+    --green-4: #5a7400;
+    --green-5: #484431;
+
+    --blue-1: #375cc6;
+    --blue-2: #5f5fdf;
+    --blue-3: #3f60af;
+    --blue-4: #0f708a;
+    --blue-5: #68708a;
+
+    --yellow-1: #a07f00;
+    --yellow-2: #a26310;
+    --yellow-3: #ba5205;
+    --yellow-4: #a07f00;
+    --yellow-5: #5a5200;
+
+    --purple-1: #aa3e74;
+    --purple-2: #b02f80;
+    --purple-3: #aa3e74;
+    --purple-4: #b02f80;
+    --purple-5: #68708a;
+}
