@@ -92,6 +92,7 @@
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
   services.displayManager.ly.enable = true;
+  services.xserver.windowManager.exwm.enable = true;
   services.xserver.windowManager.i3.enable = true;
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
