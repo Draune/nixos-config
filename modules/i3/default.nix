@@ -24,5 +24,5 @@
   
   xdg.configFile."i3/config".source = ./config;
   xdg.configFile."i3/colors.conf".source = ../../themes/${theme}/i3-colors.conf;
-  xdg.configFile."i3status/config".source = ./i3status-config;
+  xdg.configFile."i3status/config".source = ../../themes/${theme}/i3status-config;
 }
