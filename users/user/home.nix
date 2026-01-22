@@ -18,6 +18,10 @@
     };
   };
 
+  _module.args = {
+    theme = "ef-melissa-light";
+  };
+  
   imports = [
     ../../modules/emacs
     ../../modules/exwm

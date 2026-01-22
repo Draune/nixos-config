@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, theme, ...}: {
   # every thing I need to use with emacs and for dev
   home.packages = with pkgs; [
     libtool # to build vterm
@@ -40,5 +40,5 @@
     source = ./emacs-config;
     recursive = true;
   };
-  home.file.".emacs/theme.el".source = ../../themes/ef-melissa-light/emacs-theme.el;
+  home.file.".emacs.d/theme.el".source = ../../themes/${theme}/emacs-theme.el;
 }
