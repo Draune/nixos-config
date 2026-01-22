@@ -4,19 +4,11 @@
   home.username = "user";
   home.homeDirectory = "/home/user";
   
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     firefox
     unzip
   ];
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
-    };
-  };
 
   _module.args = {
     theme = "ef-melissa-light";
@@ -28,6 +20,7 @@
     ../../modules/i3
     ../../modules/kitty
     ../../modules/vesktop
+    ../../modules/virt-manager
   ];
   home.stateVersion = "25.11";
 }
