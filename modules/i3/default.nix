@@ -6,10 +6,11 @@
   ];
   
   imports = [
-    ../../modules-wm/feh
-    ../../modules-wm/picom
-    ../../modules-wm/maim
-    ../../modules-wm/rofi
+    ../feh
+    ../picom
+    ../maim
+    ../rofi
+    ../kitty
   ];
 
   xdg.desktopEntries = {

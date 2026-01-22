@@ -6,9 +6,9 @@
   ];
   
   imports = [
-    ../../modules-wm/feh
-    ../../modules-wm/picom
-    ../../modules-wm/maim
+    ../feh
+    ../picom
+    ../maim
   ];
 
   xdg.desktopEntries = {
