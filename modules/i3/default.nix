@@ -1,4 +1,4 @@
-{pkgs, config, ...}: {
+{pkgs, config, theme, ...}: {
   # Don't really needs to install Xephyr (xorg.xserver) since I will already have Xorg installed
   
   home.packages = with pkgs; [
@@ -23,5 +23,6 @@
   };
   
   xdg.configFile."i3/config".source = ./config;
+  xdg.configFile."i3/colors.conf".source = ../../themes/${theme}/i3-colors.conf;
   xdg.configFile."i3status/config".source = ./i3status-config;
 }
