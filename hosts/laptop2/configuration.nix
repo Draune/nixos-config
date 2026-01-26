@@ -13,6 +13,7 @@
       ../../modules-system/virt
       ../../modules-system/sound
       ../../modules-system/bluetooth
+      ../../modules-system/nix-ld
     ];
 
   # Bootloader.
