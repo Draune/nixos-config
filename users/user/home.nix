@@ -8,6 +8,10 @@
   home.packages = with pkgs; [
     firefox
     unzip
+    (python3.withPackages (python-pkgs: with python-pkgs; [
+      tqdm
+    ]))
+    arandr
   ];
 
   _module.args = {
