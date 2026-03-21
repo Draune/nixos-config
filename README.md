@@ -1,7 +1,7 @@
 To install launch from the flake repo:
 
 ```
-sudo nixos-rebuild switch --flake '.?submodules=1' --impure --cores 1
+cd ~/Documents/nixos-config/ && git submodule update --remote && sudo nixos-rebuild switch --flake '.?submodules=1' --impure --cores 1
 ```
 
 - `'.?submodules=1'`: to get emacs-config from git submodule
