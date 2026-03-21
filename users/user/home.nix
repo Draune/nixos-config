@@ -15,7 +15,7 @@
   ];
 
   _module.args = {
-    theme = "ef-melissa-light";
+    theme = "default";
   };
   
   imports = [
