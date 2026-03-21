@@ -1,0 +1,150 @@
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+/* ===================== */
+/* Core theme variables  */
+/* ===================== */
+body {
+    --font: 'DejaVu Sans Mono';
+    --code-font: 'DejaVu Sans Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+
+    --background-image: off;
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+
+    --small-user-panel: on;
+    --unrounding: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: var(--text-4);
+    --label-font-weight: 500;
+}
+
+/* ===================== */
+/* Color system (Emacs)  */
+/* ===================== */
+:root {
+    --colors: on;
+
+    /* ========= Text ========= */
+    --text-0: var(--bg-4);
+    --text-1: #000000;   /* primary text */
+    --text-2: #000000;   /* headers */
+    --text-3: #333333;   /* normal text */
+    --text-4: #555555;   /* icons / secondary */
+    --text-5: #777777;   /* muted */
+
+    /* ========= Backgrounds ========= */
+    --bg-1: #e6e6e6;     /* active */
+    --bg-2: #f2f2f2;     /* hover */
+    --bg-3: #fafafa;     /* panels */
+    --bg-4: #ffffff;     /* main */
+
+    --hover: var(--bg-2);
+    --active: var(--bg-1);
+    --active-2: #dcdcdc;
+    --message-hover: #f2f2f2;
+
+    /* ========= Accents ========= */
+    --accent-1: #0000ee; /* links (VERY Emacs) */
+    --accent-2: #5f5fff;
+    --accent-3: #0000ee;
+    --accent-4: #5f5fff;
+    --accent-5: #0000cc;
+
+    --accent-new: #cc0000; /* danger */
+
+    --mention: linear-gradient(
+        to right,
+        color-mix(in srgb, #0000ee 15%, transparent),
+        transparent
+    );
+
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in srgb, #0000ee 25%, transparent),
+        transparent
+    );
+
+    --reply: linear-gradient(
+        to right,
+        color-mix(in srgb, #000000 10%, transparent),
+        transparent
+    );
+
+    --reply-hover: linear-gradient(
+        to right,
+        color-mix(in srgb, #000000 18%, transparent),
+        transparent
+    );
+
+    /* ========= Status ========= */
+    --online: #008000;
+    --idle: #b8860b;
+    --dnd: #cc0000;
+    --streaming: #a020f0;
+    --offline: #888888;
+
+    /* ========= Borders ========= */
+    --border-light: #e6e6e6;
+    --border: #cccccc;
+    --border-hover: #0000ee;
+    --button-border: rgba(0, 0, 0, 0.1);
+
+    /* ========= Base palette ========= */
+    --red-1: #cc0000;
+    --red-2: #ff0000;
+    --red-3: #cc3333;
+    --red-4: #b8860b;
+    --red-5: #555555;
+
+    --green-1: #008000;
+    --green-2: #00a000;
+    --green-3: #008000;
+    --green-4: #00a000;
+    --green-5: #000000;
+
+    --blue-1: #0000ee;
+    --blue-2: #5f5fff;
+    --blue-3: #0000cc;
+    --blue-4: #008b8b;
+    --blue-5: #555555;
+
+    --yellow-1: #b8860b;
+    --yellow-2: #d4aa00;
+    --yellow-3: #cc8800;
+    --yellow-4: #b8860b;
+    --yellow-5: #333333;
+
+    --purple-1: #a020f0;
+    --purple-2: #c060ff;
+    --purple-3: #a020f0;
+    --purple-4: #c060ff;
+    --purple-5: #555555;
+}

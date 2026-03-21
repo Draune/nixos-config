@@ -1,0 +1,51 @@
+* {
+    /* Theme settings */
+    highlight: bold;
+    scrollbar: true;
+
+    /* Emacs-like colors */
+    emacs-bg0:          #ffffff;
+    emacs-bg1:          #f2f2f2;
+    emacs-bg2:          #e6e6e6;
+
+    emacs-fg0:          #000000;
+    emacs-fg1:          #555555;
+
+    emacs-red-dark:     #cc0000;
+    emacs-red-light:    #ff0000;
+
+    emacs-yellow-dark:  #b8860b;
+    emacs-yellow-light: #d4aa00;
+
+    emacs-blue:         #0000ee;
+    emacs-gray:         #cccccc;
+
+    /* Theme colors */
+    background:                  @emacs-bg0;
+    background-color:            @background;
+    foreground:                  @emacs-fg0;
+    border-color:                @emacs-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @emacs-bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @emacs-bg2;
+    selected-normal-foreground:  @emacs-fg0;
+
+    active-background:           @emacs-blue;
+    active-foreground:           @emacs-bg0;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  #5f5fff;
+    selected-active-foreground:  @emacs-bg0;
+
+    urgent-background:           @emacs-red-dark;
+    urgent-foreground:           @emacs-bg0;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @emacs-red-light;
+    selected-urgent-foreground:  @emacs-bg0;
+}

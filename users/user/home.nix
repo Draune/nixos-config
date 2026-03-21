@@ -15,7 +15,7 @@
   ];
 
   _module.args = {
-    theme = "default";
+    theme = "emacs-default";
   };
   
   imports = [
