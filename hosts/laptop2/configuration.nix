@@ -72,6 +72,7 @@
   services.displayManager.ly.enable = true;
   services.xserver.windowManager.exwm.enable = true;
   services.xserver.windowManager.i3.enable = true;
+  services.desktopManager.plasma6.enable = true;
   # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
